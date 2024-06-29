@@ -1,5 +1,5 @@
 #button-list-hide{
-    display: "block";
+    display: "none";
 }
 
 body
@@ -11,11 +11,11 @@ body
 .round-button {
     border: none;
     margin-left: 10px;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
     padding: 10px; 
     border-radius: 100px;
     box-shadow: 2px 2px 0 0 black;
-
+    display: "none";
 }
 
 .civ-button

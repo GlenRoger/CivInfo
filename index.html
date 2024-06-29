@@ -3,16 +3,21 @@
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="BigBody">
+    <body id="BigBody" style="background-color: green;">
 
-        <div id="button-list-hide">       
-            <button style='background-color:white' class="button-list-hide round-button" ></button><br>
-            <button style='background-color:green' class="round-button"></button><br>
-            <button style='background-color:blue' class="round-button"></button><br>
-            <button style='background-color:yellow' class="round-button"></button><br>
-            <button style='background-color:cyan' class="round-button"></button><br>
-            <button style='background-color:pink' class="round-button"></button><br>
-            <button style='background-color:gray' class="round-button"></button><br>
+        <div id="button-list-hide" style="display: none;">       
+            <button id = "white-button"  style='background-color:white'   class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "green-button"  style='background-color:green'   class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "blue-button"   style='background-color:blue'    class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "yellow-button" style='background-color:yellow'  class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "cyan-button"   style='background-color:cyan'    class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "pink-button"   style='background-color:pink'    class="round-button" onclick="colorButtonFunction(id)"></button>
+            <button id = "gray-button"   style='background-color:gray'    class="round-button" onclick="colorButtonFunction(id)"></button>
+
+            <br>
+            <canvas id = "infoCanvas" width="250" height="250" style="background-color: white;">
+                Your browser does not support the HTML canvas.. sorry!
+            </canvas>
         </div>
         <br>
 
@@ -20,12 +25,18 @@
         <button class='civ-button' onclick="myFunction()">Civ Info</button> <br>
 
 
+
         <!-- <script src="parsing_files_makes_menu.js" charset="UTF-8"> -->
         <!-- </script> -->
 
         <script>
 
-            function myFunction() {
+var c = document.getElementById("infoCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+
+
+            function myFunction(id) {
             var y = document.getElementById("BigBody");
             var x = document.getElementById("button-list-hide");
                 if (x.style.display === "none") {
@@ -35,6 +46,15 @@
                     x.style.display = "none";
                     y.style = "background-color: green;"
                 }
+            }
+
+
+            function colorButtonFunction(id){
+                alert(c)
+                ctx.strokeText("Hello World", 10, 50);
+                
+                // ctx.strokeText(id, 10, 50);
+
             }
 
         </script>
