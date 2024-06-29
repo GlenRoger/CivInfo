@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="BigBody">
+
+        <div id="button-list-hide">       
+            <button style='background-color:white' class="button-list-hide round-button" ></button><br>
+            <button style='background-color:green' class="round-button"></button><br>
+            <button style='background-color:blue' class="round-button"></button><br>
+            <button style='background-color:yellow' class="round-button"></button><br>
+            <button style='background-color:cyan' class="round-button"></button><br>
+            <button style='background-color:pink' class="round-button"></button><br>
+            <button style='background-color:gray' class="round-button"></button><br>
+        </div>
+        <br>
+
+
+        <button class='civ-button' onclick="myFunction()">Civ Info</button> <br>
+
+
+        <!-- <script src="parsing_files_makes_menu.js" charset="UTF-8"> -->
+        <!-- </script> -->
+
+        <script>
+
+            function myFunction() {
+            var y = document.getElementById("BigBody");
+            var x = document.getElementById("button-list-hide");
+                if (x.style.display === "none") {
+                    y.style = "background-color: purple;"
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                    y.style = "background-color: green;"
+                }
+            }
+
+        </script>
+    </body>
+</html>
